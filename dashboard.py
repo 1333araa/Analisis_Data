@@ -50,7 +50,7 @@ def load_data():
 
 @st.cache_data
 def load_hour():
-    hour = pd.read_csv("data/hour.csv", parse_dates=["dteday"])
+    hour = pd.read_csv("hour.csv", parse_dates=["dteday"])
     hour.rename(columns={
         "yr": "year", "mnth": "month", "hum": "humidity",
         "cnt": "total_count", "temp": "temp_norm",
