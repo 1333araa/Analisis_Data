@@ -24,7 +24,7 @@ plt.rcParams["font.family"] = "DejaVu Sans"
 # ─────────────────────────────────────────
 @st.cache_data
 def load_data():
-    df = pd.read_csv("dashboard/main_data.csv", parse_dates=["dteday"])
+    df = pd.read_csv("main_data.csv", parse_dates=["dteday"])
 
     df["season_label"] = df["season"].map({1: "Spring", 2: "Summer", 3: "Fall", 4: "Winter"})
     df["weather_label"] = df["weather"].map({
